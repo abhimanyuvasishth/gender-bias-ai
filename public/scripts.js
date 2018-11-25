@@ -2,7 +2,8 @@ let logged_data = {
 	'ai1': {},
 	'ai2': {},
 	'overall': {},
-	'time': '',
+	'time GMT': '',
+	'time local': '',
 	'location': {}
 };
 
@@ -82,7 +83,9 @@ $("#end1-button").on("click", function(){
   }
   else {
     logged_data['overall'] = {"easy": easy, "prefer": prefer}
-		logged_data['time'] = new Date();
+		let date = new Date();
+		logged_data['time local'] = date.toTimeString();
+		logged_data['time GMT'] = date.toGMTString();
     record_results(logged_data);
     $(".end1").hide();
     $(".end2").show();
