@@ -4,10 +4,12 @@ var Request = require('request');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
 var creds = require('./credentials.json');
+var favicon = require('serve-favicon');
 
 //Create an 'express' object
 var app = express();
 
+app.use(favicon(__dirname + '/public/media/favicon.ico'));
 //Set up the views directory
 app.set("views", __dirname + '/views');
 //Set EJS as templating language WITH html as an extension

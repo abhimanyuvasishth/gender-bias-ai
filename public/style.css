@@ -2,7 +2,7 @@ body {
   padding-top: 5rem;
 }
 
-.introduction2, .introduction3, .end1, .end2 {
+.introduction2, .introduction3, .transition1, .middle1, .middle2, .end1, .end2 {
   display: none;
 }
 
