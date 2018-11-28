@@ -290,6 +290,7 @@ $("#end2-button").on("click", function(){
 	let gender = $('#gender-end2').val();
 	let age = $('#age-end2').val();
 	let education = $('#education-end2').val();
+	let ethnicity = $('#ethnicity-end2').val();
 	let gre = $('#gre-end2').val();
   let familiar = $('#familiar-end2').val();
   if (gender === "0" || age === "0" || education === "0" || gre === "0" || familiar === "0"){
@@ -297,7 +298,8 @@ $("#end2-button").on("click", function(){
     return;
   }
   else {
-    logged_data['demographic'] = {"gender": gender, "age": age, "education": education, "gre": gre, "familiar": familiar}
+    logged_data['demographic'] = {"gender": gender, "age": age, "education": education,
+																	"gre": gre, "familiar": familiar, "ethnicity": ethnicity}
 		let date = new Date();
 		logged_data['time local'] = date.toTimeString();
 		logged_data['time GMT'] = date.toGMTString();
