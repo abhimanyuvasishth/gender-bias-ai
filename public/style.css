@@ -2,7 +2,16 @@ body {
   padding-top: 5rem;
 }
 
-.introduction2, .introduction3, .transition1, .middle1, .middle2, .end1, .end2 {
+.introduction2, .introduction3, .transition1, .middle1, .middle2, .end1, .end2, .end3 {
+  display: none;
+}
+
+.first-ai1, .first-ai2, .first-ai3, .second-ai1, .second-ai2, .second-ai3 {
+  display: none;
+}
+
+.question-ai1, .question-ai2, .question-ai3, .question-ai4,
+.question-ai5, .question-ai6, .question-ai7, .question-ai8 {
   display: none;
 }
 
