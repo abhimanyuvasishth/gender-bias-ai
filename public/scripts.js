@@ -32,6 +32,13 @@ function init(){
 function update_desc(){
 	let ai1 = condition_order[0];
 	let ai2 = condition_order[1];
+
+	// Meet your AI
+	$("#meet-ai1-header").text("Meet " + ai1 + ", Your First GRE Tutor");
+	$("#meet-ai1").text("Hi! I am " + ai1 + " and I'll walk you through a GRE problem.");
+	$("#first-ai1-img").attr("src","media/" + ai1 + "-full.png");
+
+	// Questions and explanations
 	$("#first-ai2-img").attr("src","media/" + ai1 + ".png");
 	$("#first-ai3-img").attr("src","media/" + ai1 + ".png");
 	$("#first-ai4-img").attr("src","media/" + ai1 + ".png");
@@ -41,6 +48,12 @@ function update_desc(){
 	$("#question-ai3-img").attr("src","media/" + ai1 + ".png");
 	$("#question-ai4-img").attr("src","media/" + ai1 + ".png");
 
+	// Meet your AI
+	$("#meet-ai2-header").text("Meet " + ai2 + ", Your Second GRE Tutor");
+	$("#meet-ai2").text("Hi! I am " + ai2 + " and I'll show you how to approach a GRE problem.");
+	$("#second-ai1-img").attr("src","media/" + ai2 + "-full.png");
+
+	// Questions and explanations
 	$("#second-ai2-img").attr("src","media/" + ai2 + ".png");
 	$("#second-ai3-img").attr("src","media/" + ai2 + ".png");
 	$("#second-ai4-img").attr("src","media/" + ai2 + ".png");
@@ -68,11 +81,18 @@ function record_results(data) {
 }
 
 $("#introduction1-button").on("click", function(){
-  $(".introduction1").hide();
-  $(".introduction2").show();
-	$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
-  	logged_data['location'] = data;
-	});
+	let option = $('input[name=radioName]:checked', '#form-introduction1').val();
+	if (!option){
+		$("#introduction1-error").addClass("red");
+		return;
+	}
+	else {
+		$(".introduction1").hide();
+		$(".introduction2").show();
+		$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+			logged_data['location'] = data;
+		});
+	}
 });
 
 $("#introduction2-button").on("click", function(){
@@ -163,14 +183,18 @@ $("#question-ai4-button").on("click", function(){
 });
 
 $("#middle1-button").on("click", function(){
-	let easy = $('#easy-middle1').val();
-	let prefer = $('#prefer-middle1').val();
-	if (easy === "0" || prefer === "0"){
+	let concepts = $('#concepts-middle1').val();
+	let correct = $('#correct-middle1').val();
+	let friendly = $('#friendly-middle1').val();
+	let trust = $('#trust-middle1').val();
+	let relevant = $('#relevant-middle1').val();
+	if (concepts === "0" || correct === "0" || friendly === "0" || trust === "0" || relevant === "0"){
 		$("#middle1-error").addClass("red");
 		return;
 	}
 	else {
-		logged_data['ai1'] = {"easy": easy, "prefer": prefer}
+		logged_data['ai1'] = {"concepts": concepts, "correct": correct, "friendly": friendly,
+													"trust": trust, "relevant": relevant};
 		$(".middle1").hide();
 		$(".transition1").show();
 	}
@@ -259,28 +283,33 @@ $("#question-ai8-button").on("click", function(){
 });
 
 $("#middle2-button").on("click", function(){
-	let easy = $('#easy-middle2').val();
-	let prefer = $('#prefer-middle2').val();
-	if (easy === "0" || prefer === "0"){
+	let concepts = $('#concepts-middle2').val();
+	let correct = $('#correct-middle2').val();
+	let friendly = $('#friendly-middle2').val();
+	let trust = $('#trust-middle2').val();
+	let relevant = $('#relevant-middle2').val();
+	if (concepts === "0" || correct === "0" || friendly === "0" || trust === "0" || relevant === "0"){
 		$("#middle2-error").addClass("red");
 		return;
 	}
 	else {
-		logged_data['ai2'] = {"easy": easy, "prefer": prefer}
+		logged_data['ai2'] = {"concepts": concepts, "correct": correct, "friendly": friendly,
+													"trust": trust, "relevant": relevant};
 		$(".middle2").hide();
 		$(".end1").show();
 	}
 });
 
 $("#end1-button").on("click", function(){
-  let easy = $('#easy-end1').val();
+  let why = $('#why-end1').val();
+	let thoughts = $('#thoughts-end1').val();
   let prefer = $('#prefer-end1').val();
-  if (easy === "0" || prefer === "0"){
+  if (prefer === "0"){
     $("#end1-error").addClass("red");
     return;
   }
   else {
-    logged_data['overall'] = {"easy": easy, "prefer": prefer}
+    logged_data['overall'] = {"prefer": prefer, "why": why, "thoughts": thoughts}
     $(".end1").hide();
     $(".end2").show();
   }

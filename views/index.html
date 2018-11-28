@@ -12,10 +12,27 @@
   </head>
 
   <body>
+		<!-- Introduction -->
     <div class="center-template introduction1">
-      <h1 class="introduction1">IMPORTANT INSTRUCTIONS</h1>
-      <p class="lead introduction1">Here are some important instructions.</p>
-      <button type="button" class="btn btn-primary introduction1" id="introduction1-button">I Understand, Proceed</button>
+      <h1 class="introduction1">IMPORTANT INSTRUCTIONS ABOUT THE STUDY</h1>
+			<p class="introduction1"></p>
+			<p class="lead introduction1">Please answer the questions to the best of your ability.</p>
+      <p class="lead introduction1">The award will be distributed based on your performance.</p>
+			<p class="introduction1"></p>
+			<p class="lead introduction1">The study should take about 15 minutes.</p>
+
+			<p class="introduction1"></p>
+			<p class="lead introduction1">After completing the study, you will receive a code. </p>
+			<p class="lead introduction1">You can paste in the Mechanical Turk Study to receive payment.</p>
+
+			<form id="form-introduction1">
+				<input class="lead introduction1 form-check-input" type="radio" name="radioName" value="1" /> I understand <br />
+			</form>
+
+			<p class="introduction1"></p>
+			<small class="lead-small introduction1" id="introduction1-error">Please select the option before proceeding.</small>
+			<p class="introduction1"></p>
+			<button type="button" class="btn btn-primary introduction1" id="introduction1-button">Proceed</button>
     </div>
 
     <div class="center-template introduction2">
@@ -30,11 +47,21 @@
       <button type="button" class="btn btn-primary introduction3" id="introduction3-button">Continue</button>
     </div>
 
+		<!-- AI Tutor 1 -->
 		<div class="center-template first-ai1">
-      <h1 class="first-ai1">MEET YOUR TUTOR</h1>
-      <p class="lead first-ai1">The first task is with the first AI.</p>
-      <button type="button" class="btn btn-primary first-ai1" id="first-ai1-button">Continue</button>
-    </div>
+      <h1 id="meet-ai1-header" class="first-ai1">MEET YOUR GRE INSTRUCTOR</h1>
+
+			<div class="card">
+				<div class="card-body">
+					<img id="first-ai1-img" src="media/Mary.png" height="450" width="230">
+					<h5 id="meet-ai1" class="card-title">Meet Mary</h5>
+					<p> Let's get started! </p>
+				</div>
+			</div>
+
+			<p class="lead first-ai1">  </p>
+			<button type="button" class="btn btn-primary first-ai1" id="first-ai1-button">Next</button>
+		</div>
 
 		<div class="center-template first-ai2">
 			<h1 class="first-ai2">THE FIRST TASK</h1>
@@ -53,7 +80,7 @@
 			    <div class="card">
 			      <div class="card-body">
 			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
+							<img src="media/ai1-question1.png" height="500" width="500">
 			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 			      </div>
 			    </div>
@@ -80,7 +107,7 @@
 			    <div class="card">
 			      <div class="card-body">
 			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
+							<img src="media/ai1-question1.png" height="500" width="500">
 			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 			      </div>
 			    </div>
@@ -107,7 +134,7 @@
 			    <div class="card">
 			      <div class="card-body">
 			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
+							<img src="media/ai1-question1.png" height="500" width="500">
 			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 			      </div>
 			    </div>
@@ -134,7 +161,7 @@
 			    <div class="card">
 			      <div class="card-body">
 			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
+							<img src="media/ai1-question1.png" height="500" width="500">
 			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 			      </div>
 			    </div>
@@ -144,6 +171,7 @@
 			<button type="button" class="btn btn-primary first-ai5" id="first-ai5-button">Next</button>
 		</div>
 
+		<!-- AI 1 Questions -->
 		<div class="center-template question-ai1">
 			<h1 class="question-ai1">QUESTION 1</h1>
 			<p class="lead question-ai1">Please answer the question below</p>
@@ -153,14 +181,14 @@
 			    <div class="card">
 			      <div class="card-body">
 							<img id="question-ai1-img" src="media/Mary.png" height="120" width="120">
-			        <h5 class="card-title">Explanation 4</h5>
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			        <h5 class="card-title">Question 1</h5>
+			        <p class="card-text">According to the trend line, if the difference in the training index of two of the bicyclists was 40 units, what is the predicted difference between finishing time of the two cyclists?</p>
 							<form id="form1-ai1">
-								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="2" /> 2 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="3" /> 3 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="4" /> 4 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="5" /> 5 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1 hour <br />
+								<input class="form-check-input" type="radio" name="radioName" value="2" /> 3 hours <br />
+								<input class="form-check-input" type="radio" name="radioName" value="3" /> 0.5 hours <br />
+								<input class="form-check-input" type="radio" name="radioName" value="4" /> 2 hours <br />
+								<input class="form-check-input" type="radio" name="radioName" value="5" /> 2.5 hours <br />
 							</form>
 			      </div>
 			    </div>
@@ -168,9 +196,7 @@
 			  <div class="col-sm-6">
 			    <div class="card">
 			      <div class="card-body">
-			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							<img src="media/ai1-question1.png" height="500" width="500">
 			      </div>
 			    </div>
 			  </div>
@@ -191,14 +217,14 @@
 			    <div class="card">
 			      <div class="card-body">
 							<img id="question-ai2-img" src="media/Mary.png" height="120" width="120">
-			        <h5 class="card-title">Explanation 4</h5>
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			        <h5 class="card-title">Question 2</h5>
+			        <p class="card-text">Approximately what was the ratio of the value of sensitized goods to the value of still-picture equipment produced in 1971 in the United States? </p>
 							<form id="form2-ai1">
-								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="2" /> 2 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="3" /> 3 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="4" /> 4 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="5" /> 5 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="1" /> 2:1 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="2" /> 3:1 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="3" /> 4:1 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="4" /> 1:2 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="5" /> 1:1 <br />
 							</form>
 			      </div>
 			    </div>
@@ -206,9 +232,7 @@
 			  <div class="col-sm-6">
 			    <div class="card">
 			      <div class="card-body">
-			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							<img src="media/ai1-question2.png" height="400" width="400">
 			      </div>
 			    </div>
 			  </div>
@@ -229,14 +253,14 @@
 			    <div class="card">
 			      <div class="card-body">
 							<img id="question-ai3-img" src="media/Mary.png" height="120" width="120">
-			        <h5 class="card-title">Explanation 4</h5>
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			        <h5 class="card-title">Question 3</h5>
+			        <p class="card-text">For which year did total expenditures increase the most from the year before?</p>
 							<form id="form3-ai1">
-								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="2" /> 2 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="3" /> 3 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="4" /> 4 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="5" /> 5 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1995 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="2" /> 1996 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="3" /> 1997 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="4" /> 2001 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="5" /> 2002 <br />
 							</form>
 			      </div>
 			    </div>
@@ -244,9 +268,7 @@
 			  <div class="col-sm-6">
 			    <div class="card">
 			      <div class="card-body">
-			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							<img src="media/ai1-question3.png" height="500" width="400">
 			      </div>
 			    </div>
 			  </div>
@@ -267,14 +289,14 @@
 			    <div class="card">
 			      <div class="card-body">
 							<img id="question-ai4-img" src="media/Mary.png" height="120" width="120">
-			        <h5 class="card-title">Explanation 4</h5>
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			        <h5 class="card-title">Question 4</h5>
+			        <p class="card-text">What is the approximate ratio of the number of workers in the Agricultural category in 2001 to the projected number of such workers in 2015?</p>
 							<form id="form4-ai1">
-								<input class="form-check-input" type="radio" name="radioName" value="1" /> 1 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="2" /> 2 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="3" /> 3 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="4" /> 4 <br />
-								<input class="form-check-input" type="radio" name="radioName" value="5" /> 5 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="1" /> 3:4 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="2" /> 2:3 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="3" /> 2:5 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="4" /> 1:4 <br />
+								<input class="form-check-input" type="radio" name="radioName" value="5" /> 2:1 <br />
 							</form>
 			      </div>
 			    </div>
@@ -282,9 +304,7 @@
 			  <div class="col-sm-6">
 			    <div class="card">
 			      <div class="card-body">
-			        <h5 class="card-title">Special title treatment</h5>
-							<img src="media/square.png" height="400" width="500">
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							<img src="media/ai1-question4.png" height="300" width="600">
 			      </div>
 			    </div>
 			  </div>
@@ -296,25 +316,75 @@
 			<button type="button" class="btn btn-primary question-ai4" id="question-ai4-button">Continue</button>
 		</div>
 
+		<!-- AI 1 Survey -->
 		<div class="center-template middle1">
-      <h1 class="middle1">1st AI SURVEY</h1>
-      <p class="lead middle1">Here are a few questions for you.</p>
+      <h1 class="middle1">Evaluation</h1>
+      <p class="lead middle1">Please evaluate your interaction with the tutor you just saw.</p>
       <hr class="middle1 form-survey">
 
-      <p class="lead middle1">Which two task blocks were easier for you to complete?</p>
-      <select class="lead custom-select my-1 mr-sm-2 middle1 form-survey option" id="easy-middle1">
-        <option value="0">Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
+      <p class="lead middle1">How well did the tutor explain the concepts?</p>
+      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="concepts-middle1">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely poorly</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely well</option>
       </select>
       <p class="lead middle1">  </p>
 
-      <p class="lead middle1">Which two task blocks did you prefer?</p>
-      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="prefer-middle1">
-        <option value="0" selected>Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
+      <p class="lead middle1">To what extent are you convinced that the information given to you by the tutor is correct?</p>
+      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="correct-middle1">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely unconvinced</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely convinced</option>
       </select>
+			<p class="lead middle1">  </p>
+
+			<p class="lead middle1">How friendly do you think the tutor is?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="friendly-middle1">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely unfriendly</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely friendly</option>
+			</select>
+			<p class="lead middle1">  </p>
+
+			<p class="lead middle1">How much do you trust the tutor's explanations?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="trust-middle1">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely little trust</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Complete trust</option>
+			</select>
+			<p class="lead middle1">  </p>
+
+			<p class="lead middle1">How relevant was the tutor's explanations to the questions asked?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="relevant-middle1">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely irrelevant</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely relevant</option>
+			</select>
 
       <p class="lead middle1">  </p>
       <small class="lead-small middle1" id="middle1-error">Please fill out all the information before proceeding.</small>
@@ -322,20 +392,31 @@
       <button type="button" class="btn btn-primary middle1" id="middle1-button">Continue</button>
     </div>
 
+		<!-- Transition -->
 		<div class="center-template transition1">
 			<h1 class="transition1">THE SECOND TASK</h1>
 			<p class="lead transition1">The first task is with the second AI.</p>
 			<button type="button" class="btn btn-primary transition1" id="transition1-button">Continue</button>
 		</div>
 
+		<!-- AI 2 -->
 		<div class="center-template second-ai1">
-      <h1 class="second-ai1">MEET YOUR TUTOR</h1>
-      <p class="lead second-ai1">The second task is with the second AI.</p>
-      <button type="button" class="btn btn-primary second-ai1" id="second-ai1-button">Continue</button>
-    </div>
+      <h1 id="meet-ai2-header" class="second-ai1">MEET YOUR GRE INSTRUCTOR</h1>
+
+			<div class="card">
+				<div class="card-body">
+					<img id="second-ai1-img" src="media/James.png" height="450" width="230">
+					<h5 id="meet-ai2" class="card-title">Meet James</h5>
+					<p> Let's begin! </p>
+				</div>
+			</div>
+
+			<p class="lead first-ai2">  </p>
+			<button type="button" class="btn btn-primary second-ai1" id="second-ai1-button">Next</button>
+		</div>
 
 		<div class="center-template second-ai2">
-			<h1 class="second-ai2">THE second TASK</h1>
+			<h1 class="second-ai2">THE SECOND TASK</h1>
 			<p class="lead second-ai2">The second task is with the second AI.</p>
 			<div class="row">
 				<div class="col-sm-6">
@@ -442,6 +523,7 @@
 			<button type="button" class="btn btn-primary second-ai5" id="second-ai5-button">Next</button>
 		</div>
 
+		<!-- AI 2 Questions -->
 		<div class="center-template question-ai5">
 			<h1 class="question-ai5">QUESTION 1</h1>
 			<p class="lead question-ai5">Please answer the question below</p>
@@ -594,25 +676,75 @@
 			<button type="button" class="btn btn-primary question-ai8" id="question-ai8-button">Continue</button>
 		</div>
 
+		<!-- AI 2 Survey -->
 		<div class="center-template middle2">
-      <h1 class="middle2">2nd AI SURVEY</h1>
-      <p class="lead middle2">Here are a few questions for you.</p>
+      <h1 class="middle2">Evaluation</h1>
+      <p class="lead middle2">Please evaluate your interaction with the tutor you just saw.</p>
       <hr class="middle2 form-survey">
 
-      <p class="lead middle2">Which two task blocks were easier for you to complete?</p>
-      <select class="lead custom-select my-1 mr-sm-2 middle2 form-survey option" id="easy-middle2">
-        <option value="0">Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
+      <p class="lead middle2">How well did the tutor explain the concepts?</p>
+      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="concepts-middle2">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely poorly</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely well</option>
       </select>
       <p class="lead middle2">  </p>
 
-      <p class="lead middle2">Which two task blocks did you prefer?</p>
-      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="prefer-middle2">
-        <option value="0" selected>Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
+      <p class="lead middle2">To what extent are you convinced that the information given to you by the tutor is correct?</p>
+      <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="correct-middle2">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely unconvinced</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely convinced</option>
       </select>
+			<p class="lead middle2">  </p>
+
+			<p class="lead middle2">How friendly do you think the tutor is?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="friendly-middle2">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely unfriendly</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely friendly</option>
+			</select>
+			<p class="lead middle2">  </p>
+
+			<p class="lead middle2">How much do you trust the tutor's explanations?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="trust-middle2">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely little trust</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Complete trust</option>
+			</select>
+			<p class="lead middle2">  </p>
+
+			<p class="lead middle2">How relevant was the tutor's explanations to the questions asked?</p>
+			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="relevant-middle2">
+				<option selected value="0">Select an option</option>
+				<option value="1">1-Extremely irrelevant</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7-Extremely relevant</option>
+			</select>
 
       <p class="lead middle2">  </p>
       <small class="lead-small middle2" id="middle2-error">Please fill out all the information before proceeding.</small>
@@ -620,25 +752,25 @@
       <button type="button" class="btn btn-primary middle2" id="middle2-button">Continue</button>
     </div>
 
+		<!-- Overall Survey -->
     <div class="center-template end1">
       <h1 class="end1">OVERALL SURVEY</h1>
-      <p class="lead end1">Here are a few questions for you.</p>
+      <p class="lead end1">Please answer the following questions.</p>
       <hr class="end1 form-survey">
 
-      <p class="lead end1">Which two task blocks were easier for you to complete?</p>
-      <select class="lead custom-select my-1 mr-sm-2 end1 form-survey option" id="easy-end1">
-        <option value="0">Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
-      </select>
-      <p class="lead end1">  </p>
-
-      <p class="lead end1">Which two task blocks did you prefer?</p>
+      <p class="lead end1">Which tutor did you prefer?</p>
       <select class="lead custom-select my-1 mr-sm-2 form-survey option" id="prefer-end1">
         <option value="0" selected>Select an option</option>
-        <option value="First two">First Two Task Blocks</option>
-        <option value="Second two">Second Two Task Blocks</option>
+        <option value="Mary">Mary</option>
+        <option value="James">James</option>
       </select>
+			<p class="lead end1">  </p>
+
+			<p class="lead end1">(Optional) Why do you think so?</p>
+			<input type="text" class="lead" id="why-end1">
+
+			<p class="lead end1">(Optional) Please share your thoughts about the experiment or the tutors here.</p>
+			<input type="text" class="lead" id="thoughts-end1">
 
       <p class="lead end1">  </p>
       <small class="lead-small end1" id="end1-error">Please fill out all the information before proceeding.</small>
@@ -646,6 +778,7 @@
       <button type="button" class="btn btn-primary end1" id="end1-button">Continue</button>
     </div>
 
+		<!-- Demographic Information -->
 		<div class="center-template end2">
       <h1 class="end2">DEMOGRAPHIC INFORMATION</h1>
       <p class="lead end2">Please answer the following questions. Note that you may have to scroll down to see all questions.</p>
@@ -704,7 +837,7 @@
 			</select>
 
 			<p class="lead end2">  </p>
-			<p class="lead end2">How familiar were you with the material presented in the interface?</p>
+			<p class="lead end2">How familiar were you with the material presented by the tutors before today?</p>
 			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="familiar-end2">
 				<option selected value="0">Select an option</option>
 				<option value="1">1 - Extremely Unfamiliar</option>
@@ -722,6 +855,7 @@
       <button type="button" class="btn btn-primary end2" id="end2-button">Continue</button>
     </div>
 
+		<!-- End -->
     <div class="center-template end3">
       <h1 class="end3">END</h1>
       <p class="lead end3">The study has ended. Thank you for your participation</p>
