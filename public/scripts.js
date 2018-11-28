@@ -1,4 +1,6 @@
 let logged_data = {
+	'start time local': '',
+	'condition_order': [],
 	'ai1': {},
 	'ai2': {},
 	'overall': {},
@@ -8,6 +10,46 @@ let logged_data = {
 	'time local': '',
 	'location': {}
 };
+
+let condition_order;
+let ai1;
+
+function init(){
+	let date = new Date();
+	logged_data['start time local'] = date.toTimeString();
+	let num = Math.round(Math.random());
+	if (num < 0.5) {
+		condition_order = ['Mary', 'James'];
+	}
+	else {
+		condition_order = ['James', 'Mary'];
+	}
+	console.log(condition_order);
+	logged_data['condition_order'] = condition_order;
+	update_desc();
+}
+
+function update_desc(){
+	let ai1 = condition_order[0];
+	let ai2 = condition_order[1];
+	$("#first-ai2-img").attr("src","media/" + ai1 + ".png");
+	$("#first-ai3-img").attr("src","media/" + ai1 + ".png");
+	$("#first-ai4-img").attr("src","media/" + ai1 + ".png");
+	$("#first-ai5-img").attr("src","media/" + ai1 + ".png");
+	$("#question-ai1-img").attr("src","media/" + ai1 + ".png");
+	$("#question-ai2-img").attr("src","media/" + ai1 + ".png");
+	$("#question-ai3-img").attr("src","media/" + ai1 + ".png");
+	$("#question-ai4-img").attr("src","media/" + ai1 + ".png");
+
+	$("#second-ai2-img").attr("src","media/" + ai2 + ".png");
+	$("#second-ai3-img").attr("src","media/" + ai2 + ".png");
+	$("#second-ai4-img").attr("src","media/" + ai2 + ".png");
+	$("#second-ai5-img").attr("src","media/" + ai2 + ".png");
+	$("#question-ai5-img").attr("src","media/" + ai2 + ".png");
+	$("#question-ai6-img").attr("src","media/" + ai2 + ".png");
+	$("#question-ai7-img").attr("src","media/" + ai2 + ".png");
+	$("#question-ai8-img").attr("src","media/" + ai2 + ".png");
+}
 
 // A function to accept an object and POST it to the server as JSON
 function record_results(data) {
@@ -55,6 +97,16 @@ $("#first-ai2-button").on("click", function(){
 
 $("#first-ai3-button").on("click", function(){
   $(".first-ai3").hide();
+  $(".first-ai4").show();
+});
+
+$("#first-ai4-button").on("click", function(){
+  $(".first-ai4").hide();
+  $(".first-ai5").show();
+});
+
+$("#first-ai5-button").on("click", function(){
+  $(".first-ai5").hide();
   $(".question-ai1").show();
 });
 
@@ -141,6 +193,16 @@ $("#second-ai2-button").on("click", function(){
 
 $("#second-ai3-button").on("click", function(){
   $(".second-ai3").hide();
+  $(".second-ai4").show();
+});
+
+$("#second-ai4-button").on("click", function(){
+  $(".second-ai4").hide();
+  $(".second-ai5").show();
+});
+
+$("#second-ai5-button").on("click", function(){
+  $(".second-ai5").hide();
   $(".question-ai5").show();
 });
 
@@ -246,6 +308,7 @@ $("#end2-button").on("click", function(){
 });
 
 $(document).ready(function() {
+	init();
   $(".introduction1").show();
   $(".introduction2").hide();
   $(".introduction3").hide();
