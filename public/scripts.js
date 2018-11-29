@@ -37,12 +37,19 @@ function update_desc(){
 	$("#meet-ai1-header").text("Meet " + ai1 + ", Your First GRE Tutor");
 	$("#meet-ai1").text("Hi! I am " + ai1 + " and I'll walk you through a GRE problem.");
 	$("#first-ai1-img").attr("src","media/" + ai1 + "-full.png");
+	$("#first-ai5-img").attr("src","media/" + ai1 + ".png");
+	$("#ai1-explanation1").text("Tutor: " + ai1);
+	$("#ai1-explanation2").text("Tutor: " + ai1);
+	$("#ai1-explanation3").text("Tutor: " + ai1);
+	$("#ai1-explanation4").text("Tutor: " + ai1);
+	$("#ai1-explanation5").text("Tutor: " + ai1);
 
 	// Questions and explanations
 	$("#first-ai2-img").attr("src","media/" + ai1 + ".png");
 	$("#first-ai3-img").attr("src","media/" + ai1 + ".png");
 	$("#first-ai4-img").attr("src","media/" + ai1 + ".png");
 	$("#first-ai5-img").attr("src","media/" + ai1 + ".png");
+	$("#first-ai6-img").attr("src","media/" + ai1 + ".png");
 	$("#question-ai1-img").attr("src","media/" + ai1 + ".png");
 	$("#question-ai2-img").attr("src","media/" + ai1 + ".png");
 	$("#question-ai3-img").attr("src","media/" + ai1 + ".png");
@@ -52,6 +59,11 @@ function update_desc(){
 	$("#meet-ai2-header").text("Meet " + ai2 + ", Your Second GRE Tutor");
 	$("#meet-ai2").text("Hi! I am " + ai2 + " and I'll show you how to approach a GRE problem.");
 	$("#second-ai1-img").attr("src","media/" + ai2 + "-full.png");
+	$("#ai2-explanation1").text("Tutor: " + ai2);
+	$("#ai2-explanation2").text("Tutor: " + ai2);
+	$("#ai2-explanation3").text("Tutor: " + ai2);
+	$("#ai2-explanation4").text("Tutor: " + ai2);
+	$("#ai2-explanation5").text("Tutor: " + ai2);
 
 	// Questions and explanations
 	$("#second-ai2-img").attr("src","media/" + ai2 + ".png");
@@ -88,6 +100,7 @@ $("#introduction1-button").on("click", function(){
 	}
 	else {
 		$(".introduction1").hide();
+		// $(".second-ai1").show();
 		$(".introduction2").show();
 		$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
 			logged_data['location'] = data;
@@ -112,7 +125,7 @@ $("#first-ai1-button").on("click", function(){
 
 $("#first-ai2-button").on("click", function(){
   $(".first-ai2").hide();
-  $(".first-ai3").show();
+  $(".first-ai4").show();
 });
 
 $("#first-ai3-button").on("click", function(){
@@ -127,6 +140,11 @@ $("#first-ai4-button").on("click", function(){
 
 $("#first-ai5-button").on("click", function(){
   $(".first-ai5").hide();
+  $(".first-ai6").show();
+});
+
+$("#first-ai6-button").on("click", function(){
+  $(".first-ai6").hide();
   $(".question-ai1").show();
 	$("#question-ai1-button").hide();
 	$(".solution-ai1").hide();
@@ -171,9 +189,10 @@ $("#submit-q2-button").on("click", function(){
 
 $("#question-ai2-button").on("click", function(){
 	$(".question-ai2").hide();
-	$(".question-ai3").show();
-	$("#question-ai3-button").hide();
-	$(".solution-ai3").hide();
+	$(".middle1").show();
+	// $(".question-ai3").show();
+	// $("#question-ai3-button").hide();
+	// $(".solution-ai3").hide();
 });
 
 $("#submit-q3-button").on("click", function(){
@@ -307,9 +326,10 @@ $("#submit-q6-button").on("click", function(){
 
 $("#question-ai6-button").on("click", function(){
 	$(".question-ai6").hide();
-	$(".question-ai7").show();
-	$("#question-ai7-button").hide();
-	$(".solution-ai7").hide();
+	$(".middle2").show();
+	// $(".question-ai7").show();
+	// $("#question-ai7-button").hide();
+	// $(".solution-ai7").hide();
 });
 
 $("#submit-q7-button").on("click", function(){
@@ -374,14 +394,17 @@ $("#middle2-button").on("click", function(){
 
 $("#end1-button").on("click", function(){
   let why = $('#why-end1').val();
+	let difficult = $('#difficult-end1').val();
+	let improvement = $('#improvement-end1').val();
 	let thoughts = $('#thoughts-end1').val();
   let prefer = $('#prefer-end1').val();
-  if (prefer === "0"){
+  if (prefer === "0" || difficult === "0" || improvement === "0"){
     $("#end1-error").addClass("red");
     return;
   }
   else {
-    logged_data['overall'] = {"prefer": prefer, "why": why, "thoughts": thoughts}
+    logged_data['overall'] = {"prefer": prefer, "difficult": difficult, "improvement": improvement,
+															"why": why, "thoughts": thoughts}
     $(".end1").hide();
     $(".end2").show();
   }
