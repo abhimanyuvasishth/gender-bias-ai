@@ -128,58 +128,94 @@ $("#first-ai4-button").on("click", function(){
 $("#first-ai5-button").on("click", function(){
   $(".first-ai5").hide();
   $(".question-ai1").show();
+	$("#question-ai1-button").hide();
+	$(".solution-ai1").hide();
 });
 
-$("#question-ai1-button").on("click", function(){
+$("#submit-q1-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form1-ai1').val();
 	if (!option){
 		$("#question-ai1-error").addClass("red");
 		return;
 	}
 	else {
+		$("#question-ai1-error").hide();
 		logged_data['answers']['question1-ai1'] = option;
-		$(".question-ai1").hide();
-	  $(".question-ai2").show();
+		$("#question-ai1-button").show();
+		$("#submit-q1-button").hide();
+	  $(".solution-ai1").show();
 	}
 });
 
-$("#question-ai2-button").on("click", function(){
+$("#question-ai1-button").on("click", function(){
+	$(".question-ai1").hide();
+  $(".question-ai2").show();
+	$("#question-ai2-button").hide();
+	$(".solution-ai2").hide();
+});
+
+$("#submit-q2-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form2-ai1').val();
 	if (!option){
 		$("#question-ai2-error").addClass("red");
 		return;
 	}
 	else {
+		$("#question-ai2-error").hide();
 		logged_data['answers']['question2-ai1'] = option;
-		$(".question-ai2").hide();
-	  $(".question-ai3").show();
+		$("#submit-q2-button").hide();
+		$("#question-ai2-button").show();
+	  $(".solution-ai2").show();
 	}
 });
 
-$("#question-ai3-button").on("click", function(){
+$("#question-ai2-button").on("click", function(){
+	$(".question-ai2").hide();
+	$(".question-ai3").show();
+	$("#question-ai3-button").hide();
+	$(".solution-ai3").hide();
+});
+
+$("#submit-q3-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form3-ai1').val();
 	if (!option){
 		$("#question-ai3-error").addClass("red");
 		return;
 	}
 	else {
+		$("#question-ai3-error").hide();
 		logged_data['answers']['question3-ai1'] = option;
-		$(".question-ai3").hide();
-	  $(".question-ai4").show();
+		$("#submit-q3-button").hide();
+		$("#question-ai3-button").show();
+	  $(".solution-ai3").show();
 	}
 });
 
-$("#question-ai4-button").on("click", function(){
+$("#question-ai3-button").on("click", function(){
+	$(".question-ai3").hide();
+	$(".question-ai4").show();
+	$("#question-ai4-button").hide();
+	$(".solution-ai4").hide();
+});
+
+$("#submit-q4-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form4-ai1').val();
 	if (!option){
 		$("#question-ai4-error").addClass("red");
 		return;
 	}
 	else {
+		$("#question-ai4-error").hide();
 		logged_data['answers']['question4-ai1'] = option;
-		$(".question-ai4").hide();
-	  $(".middle1").show();
+		$("#submit-q4-button").hide();
+		$("#question-ai4-button").show();
+	  $(".solution-ai4").show();
 	}
+});
+
+$("#question-ai4-button").on("click", function(){
+	$(".question-ai4").hide();
+	$(".middle1").show();
 });
 
 $("#middle1-button").on("click", function(){
@@ -228,9 +264,11 @@ $("#second-ai4-button").on("click", function(){
 $("#second-ai5-button").on("click", function(){
   $(".second-ai5").hide();
   $(".question-ai5").show();
+	$("#question-ai5-button").hide();
+	$(".solution-ai5").hide();
 });
 
-$("#question-ai5-button").on("click", function(){
+$("#submit-q5-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form1-ai2').val();
 	if (!option){
 		$("#question-ai5-error").addClass("red");
@@ -238,12 +276,21 @@ $("#question-ai5-button").on("click", function(){
 	}
 	else {
 		logged_data['answers']['question1-ai2'] = option;
-		$(".question-ai5").hide();
-	  $(".question-ai6").show();
+		$("#question-ai5-error").hide();
+		$("#submit-q5-button").hide();
+		$("#question-ai5-button").show();
+	  $(".solution-ai5").show();
 	}
 });
 
-$("#question-ai6-button").on("click", function(){
+$("#question-ai5-button").on("click", function(){
+	$(".question-ai5").hide();
+	$(".question-ai6").show();
+	$("#question-ai6-button").hide();
+	$(".solution-ai6").hide();
+});
+
+$("#submit-q6-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form2-ai2').val();
 	if (!option){
 		$("#question-ai6-error").addClass("red");
@@ -251,12 +298,21 @@ $("#question-ai6-button").on("click", function(){
 	}
 	else {
 		logged_data['answers']['question2-ai2'] = option;
-		$(".question-ai6").hide();
-	  $(".question-ai7").show();
+		$("#question-ai6-error").hide();
+		$("#submit-q6-button").hide();
+		$("#question-ai6-button").show();
+	  $(".solution-ai6").show();
 	}
 });
 
-$("#question-ai7-button").on("click", function(){
+$("#question-ai6-button").on("click", function(){
+	$(".question-ai6").hide();
+	$(".question-ai7").show();
+	$("#question-ai7-button").hide();
+	$(".solution-ai7").hide();
+});
+
+$("#submit-q7-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form3-ai2').val();
 	if (!option){
 		$("#question-ai7-error").addClass("red");
@@ -264,12 +320,21 @@ $("#question-ai7-button").on("click", function(){
 	}
 	else {
 		logged_data['answers']['question3-ai2'] = option;
-		$(".question-ai7").hide();
-	  $(".question-ai8").show();
+		$("#question-ai7-error").hide();
+		$("#submit-q7-button").hide();
+		$("#question-ai7-button").show();
+	  $(".solution-ai7").show();
 	}
 });
 
-$("#question-ai8-button").on("click", function(){
+$("#question-ai7-button").on("click", function(){
+	$(".question-ai7").hide();
+	$(".question-ai8").show();
+	$("#question-ai8-button").hide();
+	$(".solution-ai8").hide();
+});
+
+$("#submit-q8-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form4-ai2').val();
 	if (!option){
 		$("#question-ai8-error").addClass("red");
@@ -277,9 +342,16 @@ $("#question-ai8-button").on("click", function(){
 	}
 	else {
 		logged_data['answers']['question4-ai2'] = option;
-		$(".question-ai8").hide();
-	  $(".middle2").show();
+		$("#question-ai8-error").hide();
+		$("#submit-q8-button").hide();
+		$("#question-ai8-button").show();
+	  $(".solution-ai8").show();
 	}
+});
+
+$("#question-ai8-button").on("click", function(){
+	$(".question-ai8").hide();
+	$(".middle2").show();
 });
 
 $("#middle2-button").on("click", function(){
