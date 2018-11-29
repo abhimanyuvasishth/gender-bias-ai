@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/abhimanyuvasishth/gender-bias-ai/issues"
   },
-  "homepage": "https://github.com/abhimanyuvasishth/gender-bias-ai#readme"
+  "homepage": "https://github.com/abhimanyuvasishth/gender-bias-ai#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "underscore": "^1.9.1"
+  }
 }
