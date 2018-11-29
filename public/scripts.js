@@ -109,8 +109,15 @@ $("#introduction1-button").on("click", function(){
 });
 
 $("#introduction2-button").on("click", function(){
-  $(".introduction2").hide();
-  $(".introduction3").show();
+	let option = $('input[name=radioName]:checked', '#form-introduction2').val();
+	if (!option){
+		$("#introduction2-error").addClass("red");
+		return;
+	}
+	else {
+  	$(".introduction2").hide();
+  	$(".introduction3").show();
+	}
 });
 
 $("#introduction3-button").on("click", function(){
