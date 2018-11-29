@@ -1,0 +1,19 @@
+{
+  "name": "gender-bias-ai",
+  "version": "1.0.0",
+  "description": "Code for a study investigating gender bias in the context of online tutoring by an AI assistant",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhimanyuvasishth/gender-bias-ai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhimanyuvasishth/gender-bias-ai/issues"
+  },
+  "homepage": "https://github.com/abhimanyuvasishth/gender-bias-ai#readme"
+}
