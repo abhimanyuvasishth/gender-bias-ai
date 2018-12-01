@@ -23,7 +23,7 @@
 
 			<p class="introduction1"></p>
 			<p class="lead introduction1">After completing the study, you will receive a code. </p>
-			<p class="lead introduction1">You can paste in the Mechanical Turk Study to receive payment.</p>
+			<p class="lead introduction1">You can paste this code in the Mechanical Turk Study to receive payment.</p>
 
 			<form id="form-introduction1">
 				<input class="lead introduction1 form-check-input" type="radio" name="radioName" value="1" /> I understand <br />
@@ -178,7 +178,7 @@
 								<input class="form-check-input" type="radio" name="radioName" value="5" /> 0 <br />
 							</form>
 							<p class="card-text">The slope is: (4.5-5.0)/(50-30) = -0.5/20 = -0.025</p>
-							<p class="card-text">The slope tells us that for every 1 unit increase in training index, the trend line predicts a decrease in finishing time of approximately 0.025 hours. Therefore, for an increase of training index of 10 units, the finishing times is predicted to <strong>decrease</strong> by 10 * 0.025 = 0.25 hours.</p>
+							<p class="card-text">The slope tells us that for every 1 unit increase in training index, the trend line predicts a decrease in finishing time of approximately 0.025 hours.</p>
 						</div>
 			    </div>
 			  </div>
@@ -923,8 +923,18 @@
 			<p class="lead end2">Please indicate your age</p>
 			<select class="lead custom-select my-1 mr-sm-2 form-survey option" id="age-end2">
 				<option value="0" selected>Select an option</option>
-				<option value="Yes">Yes</option>
-				<option value="No">No</option>
+				<option value="<15">Less than 15</option>
+				<option value="15-20">15 to 20</option>
+				<option value="21-25">21 to 25</option>
+				<option value="26-30">26 to 30</option>
+				<option value="31-35">31 to 35</option>
+				<option value="36-40">36 to 40</option>
+				<option value="41-45">41 to 45</option>
+				<option value="46-50">46 to 50</option>
+				<option value="51-60">51 to 60</option>
+				<option value="61-70">61 to 70</option>
+				<option value=">70">More than 70</option>
+				</select>
 			</select>
 
 			<p class="lead end2">Please indicate your ethnicity</p>
@@ -984,7 +994,11 @@
 
 		<!-- End -->
     <div class="center-template end3">
-      <h1 class="end3">END</h1>
+      <h1 class="end3">End of study</h1>
+			<p class"end3"> </p>
+			<h2 id="code" class="end3">Your code</h2>
+			<p class"end3"> </p>
+			<p class="lead end3">Please paste this code in Mechanical Turk.</p>
       <p class="lead end3">The study has ended. Thank you for your participation</p>
     </div>
 

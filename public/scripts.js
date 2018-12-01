@@ -8,11 +8,13 @@ let logged_data = {
 	'demographic': {},
 	'time GMT': '',
 	'time local': '',
-	'location': {}
+	'location': {},
+	'code': ''
 };
 
 let condition_order;
 let ai1;
+let string;
 
 function init(){
 	let date = new Date();
@@ -24,9 +26,34 @@ function init(){
 	else {
 		condition_order = ['James', 'Mary'];
 	}
-	console.log(condition_order);
 	logged_data['condition_order'] = condition_order;
 	update_desc();
+	gen_string();
+}
+
+function gen_string(){
+	let first = ["A", "B", "C", "D", "E", "F", "H", "I", "J"];
+	let second = ["K", "L", "N", "O", "P"];
+	let third = ["P", "Q", "R"];
+	string = ""
+	let i = 0;
+	for (i; i < 2; i++){
+		let index = Math.floor(Math.random() * first.length);
+		string += first[index];
+	}
+	string += "28";
+	for (i=0; i < 2; i++){
+		let index = Math.floor(Math.random() * second.length);
+		string += second[index];
+	}
+	string += "01";
+	let index = Math.floor(Math.random() * third.length);
+	string += third[index];
+	string += third[index];
+	string += "96";
+	string += "001";
+	$("#code").text(string);
+	logged_data['code'] = string;
 }
 
 function update_desc(){
@@ -78,17 +105,13 @@ function update_desc(){
 
 // A function to accept an object and POST it to the server as JSON
 function record_results(data) {
-	console.log("Posting data");
-	console.log(data);
 	$.ajax({
 		url: "/save",
 		contentType: "application/json",
 		type: "POST",
 		data: JSON.stringify(data),
 		success: function (resp) {},
-		error: function (resp) {
-			console.log(resp);
-		}
+		error: function (resp) {}
 	});
 }
 
@@ -100,7 +123,7 @@ $("#introduction1-button").on("click", function(){
 	}
 	else {
 		$(".introduction1").hide();
-		// $(".second-ai1").show();
+		// $(".end3").show();
 		$(".introduction2").show();
 		$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
 			logged_data['location'] = data;
