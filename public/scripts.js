@@ -1,4 +1,5 @@
 let logged_data = {
+	'mturk-id': '',
 	'start time local': '',
 	'condition_order': [],
 	'ai1': {},
@@ -117,13 +118,14 @@ function record_results(data) {
 
 $("#introduction1-button").on("click", function(){
 	let option = $('input[name=radioName]:checked', '#form-introduction1').val();
-	if (!option){
+	let mturk = $('#mturk-id').val();
+	if (!option || mturk.length === 0){
 		$("#introduction1-error").addClass("red");
 		return;
 	}
 	else {
+		logged_data['mturk-id'] = mturk;
 		$(".introduction1").hide();
-		// $(".end3").show();
 		$(".introduction2").show();
 		$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
 			logged_data['location'] = data;
