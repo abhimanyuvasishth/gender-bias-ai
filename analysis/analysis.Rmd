@@ -26,8 +26,11 @@ data_cleaned <- data %>%
     ethnicity = factor(ethnicity, levels= c(1:7), labels = c("Hisp", "Black", "White", "Native", "Asian", "PI", "Others")),
     preference_2 = relevel(factor(preference), ref="Mary"),
     
-    
-    ai1_num_correct =  mean(q1ai1 == ai1_correct1, q2ai1 == ai2_correct2)#number of correct answers from ai 1
+    ai1_correct_cnt = ifelse(q1ai1 == ai1_correct1, 1, 0) + ifelse(q2ai1 == ai1_correct2, 1, 0),
+    ai2_correct_cnt = ifelse(q1ai2 == ai2_correct1, 1, 0) + ifelse(q2ai2 == ai2_correct2, 1, 0),
+    mary_correct_cnt = ifelse(order == 1, ai1_correct_cnt, ai2_correct_cnt),
+    james_correct_cnt = ifelse(order == 0, ai2_correct_cnt, ai1_correct_cnt)
+    # ai1_num_correct =  mean(q1ai1 == ai1_correct1, q2ai1 == ai2_correct2)#number of correct answers from ai 1
     # pref_Mary = ifelse(preference == "Mary", 1, 0),
     # pref_James = ifelse(preference == "James", 1, 0),
     # pref_equal = ifelse(preference == "Equal", 1, 0)
