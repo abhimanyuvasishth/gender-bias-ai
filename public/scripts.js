@@ -21,7 +21,7 @@ function init(){
 	let date = new Date();
 	logged_data['start time local'] = date.toTimeString();
 	let num = Math.round(Math.random());
-	if (num < 0.2) {
+	if (num < 0.4) {
 		condition_order = ['Mary', 'James'];
 	}
 	else {
