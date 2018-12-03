@@ -1,0 +1,57 @@
+---
+title: "Gender_ai-analysis"
+output: html_document
+---
+
+```{r, message=FALSE}
+library(tidyverse)
+data <- read.csv("final_participant.csv", stringsAsFactors = FALSE) %>% 
+  select(-X)
+```
+
+```{r clean-data}
+data_cleaned <- data %>% 
+  mutate(
+    # order == 1 when Mary is first
+    ai_diff_concepts = ifelse(order == 1, ai1_concepts - ai2_concepts, ai2_concepts - ai1_concepts),
+    ai_diff_correct = ifelse(order == 1, ai1_correct - ai2_correct, ai2_correct - ai1_correct),
+    ai_diff_friendly = ifelse(order == 1, ai1_friendly - ai2_friendly, ai2_friendly - ai1_friendly),
+    ai_diff_trust = ifelse(order == 1, ai1_trust - ai2_trust, ai2_trust - ai1_trust),
+    ai_diff_relevant = ifelse(order == 1, ai1_relevant - ai2_relevant, ai2_relevant - ai1_relevant),
+    gender = factor(gender, levels= c("Male", "Female"), labels = c(0,1)),
+    age = factor(age),
+    education = factor(education),
+    takenGRE = factor(takenGRE, levels= c("No", "Yes"), labels = c(0,1)),
+    familiarity = factor(familiarity),
+    ethnicity = factor(ethnicity, levels= c(1:7), labels = c("Hisp", "Black", "White", "Native", "Asian", "PI", "Others")),
+    preference_2 = relevel(factor(preference), ref="Mary"),
+    
+    
+    ai1_num_correct =  mean(q1ai1 == ai1_correct1, q2ai1 == ai2_correct2)#number of correct answers from ai 1
+    # pref_Mary = ifelse(preference == "Mary", 1, 0),
+    # pref_James = ifelse(preference == "James", 1, 0),
+    # pref_equal = ifelse(preference == "Equal", 1, 0)
+  )
+```
+
+```{r predict-preference}
+# Logistic regresion
+library(nnet)
+lm_pref_Mary <- multinom(preference_2 ~ gender + education + familiarity, data = data_cleaned)
+summary(lm_pref_Mary)
+# lm_pref_Mary <- glm(pref_Mary ~ gender + education + familiarity, family=binomial(link='logit'), data = data_cleaned)
+# summary(lm_pref_Mary)
+```
+
+```{r multinom-pvalue}
+z <- summary(lm_pref_Mary)$coefficients/summary(lm_pref_Mary)$standard.errors
+
+p <- (1 - pnorm(abs(z), 0, 1)) * 2
+p
+```
+
+```{r}
+
+```
+
+
