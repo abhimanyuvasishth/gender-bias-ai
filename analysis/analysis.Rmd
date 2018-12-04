@@ -13,6 +13,7 @@ data <- read.csv("final_participant.csv", stringsAsFactors = FALSE) %>%
 data_cleaned <- data %>% 
   mutate(
     # order == 1 when Mary is first
+    # diff is Mary - James
     ai_diff_concepts = ifelse(order == 1, ai1_concepts - ai2_concepts, ai2_concepts - ai1_concepts),
     ai_diff_correct = ifelse(order == 1, ai1_correct - ai2_correct, ai2_correct - ai1_correct),
     ai_diff_friendly = ifelse(order == 1, ai1_friendly - ai2_friendly, ai2_friendly - ai1_friendly),
@@ -53,8 +54,14 @@ p <- (1 - pnorm(abs(z), 0, 1)) * 2
 p
 ```
 
-```{r}
+```{r lm-diff-trust}
+mod_trust = lm(ai_diff_trust ~ education, data = data_cleaned)
+summary(mod_trust)
+```
 
+```{r lm-diff-relevance}
+mod_rele = lm(ai_diff_relevant ~ gender + order, data = data_cleaned)
+summary(mod_rele)
 ```
 
 
